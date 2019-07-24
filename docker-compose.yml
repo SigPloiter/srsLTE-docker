@@ -13,7 +13,9 @@ services:
       - /sbin:/sbin 
       - /sys:/sys 
       - /usr:/usr
-    
+    ports:
+      - "2152:2152/udp"
+      - "2123:2123/udp"
     networks:
       core01:
         ipv4_address: 10.2.1.2
