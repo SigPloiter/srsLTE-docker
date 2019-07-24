@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  srsepc:
+    container_name: srsepc01
+    build: .
+    volumes:
+      - /bin:/bin
+      - /etc:/etc 
+      - /lib:/lib 
+      - /var:/var 
+      - /lib64:/lib64 
+      - /sbin:/sbin 
+      - /sys:/sys 
+      - /usr:/usr
+    
+    networks:
+      core01:
+        ipv4_address: 10.2.1.2
+    tty: true
+    stdin_open: true
+    privileged: true
+
+  srsenb:
+    container_name: srsenb01
+    build: .
+    volumes:
+      - /bin:/bin
+      - /etc:/etc 
+      - /lib:/lib  
+      - /var:/var 
+      - /dev:/dev 
+      - /lib64:/lib64 
+      - /sbin:/sbin 
+      - /sys:/sys 
+      - /usr:/usr
+   
+    networks:
+      ran01:
+        ipv4_address: 10.1.1.2
+    tty: true
+    stdin_open: true
+    privileged: true
+
+networks:
+  core01:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.2.1.0/24
+  ran01:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.1.0/24
+       
