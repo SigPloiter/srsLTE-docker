@@ -48,7 +48,9 @@ Open two different terminals and attach to the containers
 ```
 sudo docker container attach srsepc01
 
-The srsepc container has ports 2123/udp and 2152/udp exposed to the host so that users can communicate directly to the core container from the host if they only need to run the core container to run their individual tests
+The srsepc container has ports 2123/udp and 2152/udp exposed to the host 
+so that users can communicate directly to the core container from the host 
+if they only need to run the core container to run their individual tests
 ```
 
 ### Attach to the srsENB container to configure it
