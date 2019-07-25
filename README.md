@@ -33,11 +33,9 @@ Download and build srsLTE: (on host)
 ```
 git clone https://github.com/srsLTE/srsLTE-docker.git
 cd srsLTE-docker
-git clone https://github.com/srsLTE/srsLTE.git
-sudo docker-compose up -d
+chmod +x installation.sh
+sudo ./installation.sh
 
-#To allow communication between containers
-sudo iptables -I FORWARD 1 -j ACCEPT
 ```
 
 Connect to containers and configure srsLTE:
