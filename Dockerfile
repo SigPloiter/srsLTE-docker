@@ -1,12 +1,10 @@
 FROM ubuntu:latest
 
-COPY ./srsLTE /srsLTE
+COPY ./srsRAN /srsRAN
 
 RUN apt-get update -y && \
 apt-get install -y software-properties-common
 
-RUN add-apt-repository ppa:bladerf/bladerf && \
-add-apt-repository -y ppa:myriadrf/drivers
 
 RUN apt-get update -y && \
 	apt-get install -y cmake \
@@ -15,12 +13,7 @@ RUN apt-get update -y && \
 	libboost-program-options-dev \
 	libconfig++-dev \
 	libsctp-dev \
-	libbladerf1 \
-	libbladerf2 \
-	libbladerf-dev \
-	libbladerf-udev \
-	libsoapysdr0.7 \
-	libsoapysdr-dev
+	libzmq3-dev
 
 WORKDIR srsLTE/build
 RUN cmake ../ && make && make install && ldconfig
