@@ -5,7 +5,7 @@ echo " "
 echo "Cloning srsLTE"
 echo "=============="
 echo " "
-git clone https://github.com/srsLTE/srsLTE.git
+git clone https://github.com/srsran/srsRAN.git
 
 echo " "
 echo "Firing up the containers"
