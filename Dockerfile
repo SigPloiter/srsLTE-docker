@@ -15,6 +15,6 @@ RUN apt-get update -y && \
 	libsctp-dev \
 	libzmq3-dev
 
-WORKDIR srsLTE/build
+WORKDIR srsRAN/build
 RUN cmake ../ && make && make install && ldconfig
 RUN ./srslte_install_configs.sh service
