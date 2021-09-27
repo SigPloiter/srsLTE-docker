@@ -1,11 +1,11 @@
-Docker Implementation for srsLTE
+Docker Implementation for srsRAN
 =================================
 
 This is a docker implementation for the srsEPC and srsENB. The docker-compose file will create two services one for the EPC and the other for the eNB, create two separate networks and attach the containers to them.
 
 This docker implementation supports SoapySDR and BladeRF
 
-srsLTE project repo: https://github.com/srsLTE/srsLTE
+srsRAN project repo: https://github.com/srsran/srsRAN.git
 
 Docker Requirements:
 ---------------------
@@ -27,18 +27,18 @@ sudo usermod -aG docker gh0
 sudo docker run hello-world
 
 
-Download and build srsLTE: (on host) 
+Download and build srsRAN: (on host) 
 ---------------------------------------
 
 ```
-git clone https://github.com/srsLTE/srsLTE-docker.git
+git clone https://github.com/srsran/srsRAN.git
 cd srsLTE-docker
 chmod +x installation.sh
 sudo ./installation.sh
 
 ```
 
-Connect to containers and configure srsLTE:
+Connect to containers and configure srsRAN:
 -------------------------------------------
 
 Open two different terminals and attach to the containers
