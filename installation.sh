@@ -5,6 +5,7 @@ echo " "
 echo "Cloning srsLTE"
 echo "=============="
 echo " "
+apt install git docker-compose -y
 git clone https://github.com/srsran/srsRAN.git
 
 echo " "

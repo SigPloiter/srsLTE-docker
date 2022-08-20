@@ -13,8 +13,11 @@ RUN apt-get update -y && \
 	libboost-program-options-dev \
 	libconfig++-dev \
 	libsctp-dev \
-	libzmq3-dev
+	libzmq3-dev \
+        gcc \
+        c++ \
+	build-essential
 
 WORKDIR srsRAN/build
 RUN cmake ../ && make && make install && ldconfig
-RUN ./srslte_install_configs.sh service
+RUN ./srsran_install_configs.sh service
