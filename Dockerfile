@@ -20,4 +20,4 @@ RUN apt-get update -y && \
 
 WORKDIR srsRAN/build
 RUN cmake ../ && make && make install && ldconfig
-RUN ./srslte_install_configs.sh service
+RUN ./srsran_install_configs.sh service
